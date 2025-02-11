@@ -40,6 +40,7 @@ const foodSlice = createSlice({
   name: 'foods',
   initialState,
   reducers: {
+    // @ts-ignore
     setFoodItems: (state, action) => {
       return action.payload; // Actualiza el estado con los nuevos items
     },

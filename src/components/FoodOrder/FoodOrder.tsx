@@ -76,46 +76,6 @@ function FoodOrder({ foodItem, onBack }: FoodOrderProps) {
 
   };
 
-
-
-  // const handleOrderClick = async () => {
-  //   setIsLoading(true); // Activar el mensaje de carga
-     
-  //     if (foodItem.quantity >= cantidad) {
-  //       dispatch(updateFoodItem({
-  //         id: foodItem.id,
-  //         quantity: foodItem.quantity - cantidad
-  //       }));  
-  
-  //     const product: item = { 
-  //       name: foodItem.name, 
-  //       quantity: cantidad, 
-  //       price: foodItem.price * cantidad, 
-  //       client: cliente, 
-  //       phone: telefono 
-  //     };
-  
-  //     try {
-  //       await addItem(product); // Esperar a que se complete la operación asíncrona
-  //       setMsg("Pedido enviado correctamente"); // Mostrar mensaje de éxito
-  //       console.log("Pedido enviado correctamente");
-  //     } catch (error) {
-  //       console.error("Error al enviar el pedido:", error);
-  //     } finally {
-  //       setIsLoading(false); // Desactivar el mensaje de carga
-  //     }
-  
-  //     setTimeout(() => {
-  //       setMsg(""); // Limpiar el mensaje
-  //       onBack(); // Volver al menú después de limpiar el mensaje
-  //     }, 2000);
-  //   } else {
-  //     logger.error("La cantidad del pedido excede al stock existente");
-  //     setError(true);
-  //     setIsLoading(false); // Asegurarse de desactivar el mensaje de carga
-  //   }
-  // };
-
   const handleOrderClick = async () => {
     setIsLoading(true);
   
@@ -158,7 +118,7 @@ function FoodOrder({ foodItem, onBack }: FoodOrderProps) {
       <div>
         <h3>{foodItem.name}</h3>
         <img
-          src={`/images/${foodItem.image}`}
+          src={`${import.meta.env.BASE_URL}images/${foodItem.image}`}
           alt={foodItem.name}
           style={{ width: "300px", borderRadius: "8px" }}
         />

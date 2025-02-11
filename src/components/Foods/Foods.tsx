@@ -45,7 +45,7 @@ function Foods() {
             >
               <img
                 className="foodImg"
-                src={`/images/${item.image}`}
+                src={`${import.meta.env.BASE_URL}images/${item.image}`}
                 alt={item.name}
               />
               <div className="foodItem">
