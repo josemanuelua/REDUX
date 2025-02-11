@@ -1,19 +1,11 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-//import { MenuItem } from './entities/entities';
 import Foods from './components/Foods/Foods';
-//import logger from '../Logging';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from './redux/types'; // Importamos el tipo RootState
 
-
-//export const foodItemsContext = React.createContext<MenuItem[]>([]);
-
 function App() {
   const dispatch = useDispatch();
-  // useEffect(() => {
-  //   logger.debug("Cargando App...");
-  //   }, []);
 
     useEffect(() => {
       // Esto disparará una acción que el logger interceptará

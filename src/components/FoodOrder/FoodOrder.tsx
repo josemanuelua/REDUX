@@ -1,10 +1,6 @@
 import { useState } from "react";
 import { MenuItem } from "../../entities/entities";
-
 import  logger  from "../../../Logging";
-// Import the functions you need from the SDKs you need
-// import { db } from "../../../firebaseConfig";
-// import { ref, push } from "firebase/database";
 import { useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../redux/types";
 import { updateFoodItem } from "../../redux/foodSlice";
@@ -12,26 +8,11 @@ import { useDispatch } from 'react-redux';
 import { addOrder } from "../../redux/orderSlice";
 
 
-//Interfaz que estructura el item que se envia a la base de datos
-// interface item {
-//   name: string;
-//   quantity: number;
-//   price: number;
-//   client: string;
-//   phone: string;
-// }
-
-// const addItem = async (item:item) => {
-//   const itemsRef = ref(db, "items");
-//   await push(itemsRef, item);
-//   logger.info("Datos enviados a Firebase");
-// };
 
 // FoodOrder.tsx
 interface FoodOrderProps {
   foodItem: MenuItem;
   onBack: () => void;
-  //onOrder: (id: number, cantidad: number) => void;
 }
 
 function FoodOrder({ foodItem, onBack }: FoodOrderProps) {
@@ -43,7 +24,6 @@ function FoodOrder({ foodItem, onBack }: FoodOrderProps) {
   const dispatch = useDispatch<AppDispatch>();  
   const [error, setError] = useState<boolean>(false);
   const [msg, setMsg] = useState<string>(""); // Estado para el mensaje de éxito
-  //const menuItems: MenuItem[] = useContext(foodItemsContext);
   const menuItems = useSelector((state:RootState) => state.foods);
 
     // Verificar si el id existe en los items disponibles
@@ -94,14 +74,13 @@ function FoodOrder({ foodItem, onBack }: FoodOrderProps) {
         client: cliente, 
         phone: telefono 
       }));
-  
         setMsg("Pedido enviado correctamente");
       } catch (error) {
         console.error("Error al enviar el pedido:", error);
       } finally {
         setIsLoading(false);
       }
-  
+      
       setTimeout(() => {
         setMsg("");
         onBack();
@@ -128,7 +107,7 @@ function FoodOrder({ foodItem, onBack }: FoodOrderProps) {
 
         <input
           type="number"
-          min="-10"
+          min="1"
           value={cantidad}
           onChange={handleCantidadChange}// Evento de cambio
           style={{ padding: "5px", width: "50px" }}
