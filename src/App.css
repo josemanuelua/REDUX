@@ -1,0 +1,242 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Estilo general para la app */
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+/* Títulos */
+.title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.subTitle {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Lista general */
+.ulApp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Tarjetas individuales */
+.liApp {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin: 10px;
+  width: 200px;
+  text-align: left;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.liApp:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Texto dentro de las tarjetas */
+.liApp p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Título general */
+.foodTitle {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Lista general */
+.ulFoods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Tarjetas individuales */
+.liFoods {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  margin: 15px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.liFoods:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen dentro de la tarjeta */
+.foodImg {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Contenedor de información */
+.foodItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Descripción */
+.foodDesc {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Precio */
+.foodPrice {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.toggleButton {
+  background-color: #4CAF50; /* Color de fondo verde */
+  color: white; /* Texto blanco */
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  padding: 10px 20px; /* Relleno interno */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a una mano */
+  transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+}
+
+.toggleButton:hover {
+  background-color: #45a049; /* Color más oscuro al pasar el mouse */
+}
+
+.toggleButton:active {
+  background-color: #3e8e41; /* Color más oscuro al hacer clic */
+  transform: scale(0.98); /* Pequeño efecto de escala */
+}
+
+.pedir {
+  margin: 10px;
+  background-color: #007BFF; /* Azul */
+  color: white; /* Texto blanco */
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  padding: 10px 20px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor tipo mano */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+}
+
+.pedir:hover {
+  background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+}
+
+.pedir:active {
+  background-color: #004494; /* Azul más intenso al hacer clic */
+  transform: scale(0.98); /* Ligera reducción al hacer clic */
+}
+
+.volver {
+  
+  background-color: #DC3545; /* Rojo */
+  color: white; /* Texto blanco */
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  padding: 10px 20px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor tipo mano */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+}
+
+.volver:hover {
+  background-color: #b21f2d; /* Rojo más oscuro al pasar el ratón */
+}
+
+.volver:active {
+  background-color: #891621; /* Rojo más intenso al hacer clic */
+  transform: scale(0.98); /* Ligera reducción al hacer clic */
+}
+
+.pedido{
+  margin:10px;
+  padding:10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
